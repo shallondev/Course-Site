@@ -41,9 +41,9 @@
 
     <!-- Header -->
     <section class="flex justify-center">
-        <div class="mt-8 mx-8">
-            <h1 class="text-gray-200 font-bold text-3xl">Learn Practical Linear Algebra for Programmers</h1>
-            <div class="flex justify-center"> 
+        <div class="mt-16 mx-8">
+            <h1 class="text-gray-200 font-bold md:text-3xl text-xl">Learn Practical Linear Algebra for Programmers</h1>
+            <div class="flex lg:justify-center"> 
                 <a href="#" 
                     class="mt-6 mr-6 bg-purple-800 hover:bg-purple-700 text-gray-200 hover:text-white font-bold text-lg py-3 px-8 shadow-lg transform transition-transform hover:scale-105 inline-block">
                     Get Started
@@ -57,10 +57,10 @@
     </section>
 
     <!-- Cards -->
-    <div class="container mx-auto px-4 py-10">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="container mx-auto mt-16 px-4 py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
             <!-- Matrix Operations -->
-            <div id="matrix-card">
+            <div class="course-card">
                 <div 
                 class="bg-gray-800 px-4 py-4 flex flex-col h-full border-2 hover:border-4 border-purple-800 hover:cursor-pointer hover:cursor-pointer
                 transform transition-transform hover:scale-105">
@@ -70,34 +70,41 @@
                             <div class="absolute inset-0 bg-gray-900 opacity-85"></div>
                         </div>
                         <div class="flex justify-center">
-                            <h2 class="text-3xl font-bold mb-2 text-white mt-4" id="matrix-op-text">Matrix Operations</h2>
+                            <h2 class="text-3xl font-bold mb-2 text-gray-200 mt-4 card-text">Matrix Operations</h2>
                         </div>
                     </a>
                 </div>
             </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="bg-gray-800 px-4 py-4 flex flex-col border-2 border-purple-800">
-                    <a href="#" class="block w-full max-w-xs mx-auto overflow-hidden hover:cursor-pointer transform transition-transform hover:scale-105 inline-block hover:cursor-pointer">
+            <!-- Vectors -->
+            <div class="course-card">
+                <div 
+                class="bg-gray-800 px-4 py-4 flex flex-col h-full border-2 hover:border-4 border-purple-800 hover:cursor-pointer hover:cursor-pointer
+                transform transition-transform hover:scale-105">
+                    <a href="#" class="block w-full max-w-xs mx-auto overflow-hidden">
                         <div class="relative">
-                            <img src="../media/matrixop.png" alt="Project 1" class="w-full h-full object-cover bg-white">
-                            <div class="absolute inset-0 bg-gray-900 opacity-90"></div>
+                            <img src="../media/vector.png" alt="Project 1" class="w-full h-full object-cover bg-white">
+                            <div class="absolute inset-0 bg-gray-900 opacity-85"></div>
                         </div>
                         <div class="flex justify-center">
-                            <h2 class="text-3xl font-bold mb-2 text-purple-500 mt-4">Matrix Operations</h2>
+                            <h2 class="text-3xl font-bold mb-2 text-gray-200 mt-4 card-text">Vectors</h2>
                         </div>
                     </a>
                 </div>
             </div>
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="bg-gray-800 border border-gray-500 px-4 py-4 flex flex-col">
-                    <a href="#" target="_blank">
-                        <img src="#" alt="Project 3" class="rounded-t-lg w-full h-48 sm:h-64 object-cover transform transition-transform hover:scale-105 inline-block hover:cursor-pointer">
+            <!-- Linear Transformations -->
+            <div class="course-card">
+                <div 
+                class="bg-gray-800 px-4 py-4 flex flex-col h-full border-2 hover:border-4 border-purple-800 hover:cursor-pointer hover:cursor-pointer
+                transform transition-transform hover:scale-105">
+                    <a href="#" class="block w-full max-w-xs mx-auto overflow-hidden">
+                        <div class="relative">
+                            <img src="../media/cube.png" alt="Project 1" class="w-full h-full object-cover bg-white">
+                            <div class="absolute inset-0 bg-gray-900 opacity-85"></div>
+                        </div>
+                        <div class="flex justify-center">
+                            <h2 class="text-3xl font-bold mb-2 text-gray-200 mt-4 card-text">Linear Maps</h2>
+                        </div>
                     </a>
-                    <div class="p-4">
-                        <h2 class="text-lg font-bold mb-2 text-gray-100">Frog Stickers!</h2>
-                    </div>
                 </div>
             </div>
         </div>
@@ -105,17 +112,21 @@
 </body>
 
 <script>
-    const matrixCard = document.getElementById("matrix-card");
-    const matrixText = document.getElementById("matrix-op-text");
+    // Query course cards
+    const courseCard = document.querySelectorAll(".course-card");
 
-    matrixCard.addEventListener('mouseenter', () => {
-        matrixText.classList.add('text-purple-800');
-        matrixText.classList.remove('text-white');
-    });
-
-    matrixCard.addEventListener('mouseleave', () => {
-        matrixText.classList.remove('text-purple-800');
-        matrixText.classList.add('text-white');
+    // Change text styles based on what card is hovered
+    courseCard.forEach(function(card) {
+        card.addEventListener('mouseenter', () => {
+            const cardText = card.querySelector(".card-text");
+            cardText.classList.remove('text-gray-200');
+            cardText.classList.add('text-purple-800');
+        });
+        card.addEventListener('mouseleave', () => {
+            const cardText = card.querySelector(".card-text");
+            cardText.classList.add('text-gray-200');
+            cardText.classList.remove('text-purple-800');
+        });
     });
 </script>
 </html>
