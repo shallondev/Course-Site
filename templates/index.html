@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- CSS -->
+    <!-- There is no CSS -->
 
     <!-- Linking the script -->
     <script src="script.js"></script>
@@ -17,22 +18,22 @@
 <body class="bg-gray-800">
 
     <!-- Nav bar -->
-    <nav class="bg-gray-900 py-4">
+    <nav class="bg-gray-900 py-4 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex">
                     <div class="hidden md:block">
                         <div class="flex items-baseline space-x-4">
-                            <a href="#" class="text-gray-100 hover:text-white px-3 py-2 rounded-md text-sm font-semibold border-2 border-purple-800">Learn</a>
-                            <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mission</a>
-                            <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
-                            <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Give Feedback</a>
+                            <a href="index.html" class="text-gray-200 text-lg hover:text-white px-3 py-2 rounded-md font-semibold border-2 border-purple-800">Learn</a>
+                            <a href="#" class="text-gray-200 text-lg hover:text-white px-3 py-2 rounded-md font-medium">Mission</a>
+                            <a href="#" class="text-gray-200 text-lg hover:text-white px-3 py-2 rounded-md font-medium">FAQ</a>
+                            <a href="#" class="text-gray-200 text-lg hover:text-white px-3 py-2 rounded-md font-medium">Give Feedback</a>
                         </div>
                     </div>
                 </div>
                 <div class="flex">
                     <div class="flex-shrink-0">
-                        <a href="#" class="text-purple-500 font-bold text-xl">#Shallondev</a>
+                        <a href="#" class="text-gray-200 hover:text-purple-600 font-bold text-xl">#Shallondev</a>
                     </div>
                 </div>
             </div>
@@ -61,51 +62,51 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
             <!-- Matrix Operations -->
             <div class="course-card">
-                <div 
+                <a href="matrix.html" 
                 class="bg-gray-800 px-4 py-4 flex flex-col h-full border-2 hover:border-4 border-purple-800 hover:cursor-pointer hover:cursor-pointer
                 transform transition-transform hover:scale-105">
-                    <a href="#" class="block w-full max-w-xs mx-auto overflow-hidden">
+                    <div class="block w-full max-w-xs mx-auto overflow-hidden">
                         <div class="relative">
                             <img src="../media/matrixop.png" alt="Project 1" class="w-full h-full object-cover bg-white">
-                            <div class="absolute inset-0 bg-gray-900 opacity-85"></div>
+                            <div class="absolute inset-0 bg-gray-950 opacity-55"></div>
                         </div>
                         <div class="flex justify-center">
-                            <h2 class="text-3xl font-bold mb-2 text-gray-200 mt-4 card-text">Matrix Operations</h2>
+                            <h2 class="text-xl font-semibold mb-2 text-gray-200 mt-4 card-text">Matrix Operations</h2>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
             <!-- Vectors -->
             <div class="course-card">
-                <div 
+                <a href="#" 
                 class="bg-gray-800 px-4 py-4 flex flex-col h-full border-2 hover:border-4 border-purple-800 hover:cursor-pointer hover:cursor-pointer
                 transform transition-transform hover:scale-105">
-                    <a href="#" class="block w-full max-w-xs mx-auto overflow-hidden">
+                    <div class="block w-full max-w-xs mx-auto overflow-hidden">
                         <div class="relative">
                             <img src="../media/vector.png" alt="Project 1" class="w-full h-full object-cover bg-white">
-                            <div class="absolute inset-0 bg-gray-900 opacity-85"></div>
+                            <div class="absolute inset-0 bg-gray-950 opacity-55"></div>
                         </div>
                         <div class="flex justify-center">
-                            <h2 class="text-3xl font-bold mb-2 text-gray-200 mt-4 card-text">Vectors</h2>
+                            <h2 class="text-2xl font-semibold mb-2 text-gray-200 mt-4 card-text">Vectors</h2>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
             <!-- Linear Transformations -->
             <div class="course-card">
-                <div 
+                <a href="#" 
                 class="bg-gray-800 px-4 py-4 flex flex-col h-full border-2 hover:border-4 border-purple-800 hover:cursor-pointer hover:cursor-pointer
                 transform transition-transform hover:scale-105">
-                    <a href="#" class="block w-full max-w-xs mx-auto overflow-hidden">
+                    <div class="block w-full max-w-xs mx-auto overflow-hidden">
                         <div class="relative">
                             <img src="../media/cube.png" alt="Project 1" class="w-full h-full object-cover bg-white">
-                            <div class="absolute inset-0 bg-gray-900 opacity-85"></div>
+                            <div class="absolute inset-0 bg-gray-950 opacity-55"></div>
                         </div>
                         <div class="flex justify-center">
-                            <h2 class="text-3xl font-bold mb-2 text-gray-200 mt-4 card-text">Linear Maps</h2>
+                            <h2 class="text-2xl font-semibold mb-2 text-gray-200 mt-4 card-text">Linear Maps</h2>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>    
@@ -120,12 +121,12 @@
         card.addEventListener('mouseenter', () => {
             const cardText = card.querySelector(".card-text");
             cardText.classList.remove('text-gray-200');
-            cardText.classList.add('text-purple-800');
+            cardText.classList.add('text-purple-700');
         });
         card.addEventListener('mouseleave', () => {
             const cardText = card.querySelector(".card-text");
             cardText.classList.add('text-gray-200');
-            cardText.classList.remove('text-purple-800');
+            cardText.classList.remove('text-purple-700');
         });
     });
 </script>
